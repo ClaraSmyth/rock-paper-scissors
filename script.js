@@ -1,12 +1,16 @@
-const choices = ['rock', 'paper', 'scissors'];
-let playerSelection = 'rock';
-let computerSelection = computerPLay();
+const choiceArray = ['rock', 'paper', 'scissors'];
+let playerScore = 0;
+let computerScore = 0;
+let ties = 0;
 
-function computerPLay() {
-    return choices[Math.floor(Math.random() * choices.length)];
+
+// This selects a random choice from the Array
+function computerPlay() {
+    return choiceArray[Math.floor(Math.random() * choiceArray.length)];
 }
 
-function playRound() {
+// This plays a round of the game and decides who wins
+function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return 'Tie';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
@@ -22,7 +26,43 @@ function playRound() {
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return 'Computer Wins';
     }
+ }
+
+function playGame() {
+    let playerSelection = prompt();
+    let computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection);
+    if (playRound(playerSelection, computerSelection) == 'Tie') {
+        ties++;
+    } else if (playRound(playerSelection, computerSelection) == 'Player Wins') {
+        playerScore++;
+    } else if (playRound(playerSelection, computerSelection) == 'Computer Wins') {
+        computerScore++;
+    }
+
+    console.log(playRound(playerSelection, computerSelection))
 }
 
 
-console.log(playRound())
+playGame()
+console.log(playerScore, computerScore, ties)
+playGame()
+console.log(playerScore, computerScore, ties)
+
+
+// Ignore everything below here its just test stuff xD
+
+// function playGame() {
+//     let playerSelection = prompt();
+//     let computerSelection = computerPlay();
+//     playRound(playerSelection, computerSelection);
+//     if (playRound(playerSelection, computerSelection) == 'Tie') {
+//         ties++;
+//     } else if (playRound(playerSelection, computerSelection) == 'Player Wins') {
+//         playerScore++;
+//     } else if (playRound(playerSelection, computerSelection) == 'Computer Wins') {
+//         computerScore++;
+//     }
+
+//     console.log(playRound(playerSelection, computerSelection))
+// }
