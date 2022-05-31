@@ -44,7 +44,7 @@ function validation() {
 //  This actually plays the game
 function playGame() {
     for (let i = 0; i < 99; i++) {
-        let playerSelection = prompt('Rock Paper or Scissors');
+        let playerSelection = validation();
         let computerSelection = computerPlay();
         playRound(playerSelection, computerSelection);
             if (playRound(playerSelection, computerSelection) == 'Tie') {
@@ -66,7 +66,7 @@ function playGame() {
     }
 }
 
-validation()
+playGame()
 
 // Ignore everything below here its just test stuff xD
 
