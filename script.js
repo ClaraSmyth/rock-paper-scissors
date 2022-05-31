@@ -37,6 +37,7 @@ function validation() {
     input = input.toLowerCase();
     while (input !== 'rock' && input !== 'paper' && input !== 'scissors') {
         input = prompt('Rock Paper or Scissors');
+        input = input.toLowerCase();
     }
     return input;
 }
