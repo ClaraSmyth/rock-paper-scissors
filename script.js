@@ -28,10 +28,23 @@ function playRound(playerSelection, computerSelection) {
     }
  }
 
+// Validate the user input
+function validation() {
+    let input = prompt('Rock Paper or Scissors');
+    while (input == null) {
+        input = prompt('Rock Paper or Scissors');
+    }
+    input = input.toLowerCase();
+    while (input !== 'rock' && input !== 'paper' && input !== 'scissors') {
+        input = prompt('Rock Paper or Scissors');
+    }
+    return input;
+}
+
 //  This actually plays the game
 function playGame() {
     for (let i = 0; i < 99; i++) {
-        let playerSelection = prompt();
+        let playerSelection = prompt('Rock Paper or Scissors');
         let computerSelection = computerPlay();
         playRound(playerSelection, computerSelection);
             if (playRound(playerSelection, computerSelection) == 'Tie') {
@@ -53,6 +66,16 @@ function playGame() {
     }
 }
 
-playGame()
+validation()
 
 // Ignore everything below here its just test stuff xD
+
+
+
+// This makes the validation loop if player presses cancel
+// function validation() {
+//     let input = prompt('Rock Paper or Scissors');
+//     while (input == null) {
+//         input = prompt('Rock Paper or Scissors');
+//     }
+// }
