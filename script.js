@@ -4,6 +4,15 @@ let computerScore = 0;
 let ties = 0;
 
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
+
+
+
 // This selects a random choice from the Array
 function computerPlay() {
     return choiceArray[Math.floor(Math.random() * choiceArray.length)];
@@ -67,16 +76,4 @@ function playGame() {
     }
 }
 
-playGame()
-
-// Ignore everything below here its just test stuff xD
-
-
-
-// This makes the validation loop if player presses cancel
-// function validation() {
-//     let input = prompt('Rock Paper or Scissors');
-//     while (input == null) {
-//         input = prompt('Rock Paper or Scissors');
-//     }
-// }
+// playGame()
