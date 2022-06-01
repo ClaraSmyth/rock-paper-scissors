@@ -39,6 +39,9 @@ buttons.forEach((button) => {
     });
 });
 
+function updateScoreboard() {
+    scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+}
 
 function playGame(playerButtonChoice) {
     let playerSelection = playerButtonChoice;
@@ -51,7 +54,7 @@ function playGame(playerButtonChoice) {
     } else if (playRound(playerSelection, computerSelection) == 'Computer Wins') {
         computerScore++;
     }
-    scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+    updateScoreboard();
     if (playerScore == 5) {
         console.log('Game Over: Player Wins')
     } else if (computerScore == 5) {
@@ -61,3 +64,5 @@ function playGame(playerButtonChoice) {
     console.log(playRound(playerSelection, computerSelection))
     console.log(playerScore, computerScore, ties);
 }
+
+updateScoreboard()
