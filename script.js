@@ -44,6 +44,24 @@ function updateScoreboard() {
     scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
 }
 
+
+// Resets the game and scoreboard
+function resetGame() {
+    if (playerScore == 5) {
+        console.log('Game Over: Player Wins');
+        playerScore = 0;
+        computerScore = 0;
+        ties = 0;
+        return;
+    } else if (computerScore == 5) {
+        console.log('Game Over: Computer Wins');
+        playerScore = 0;
+        computerScore = 0;
+        ties = 0;
+        return;
+    }
+}
+
 // Plays the game
 function playGame(playerButtonChoice) {
     let playerSelection = playerButtonChoice;
@@ -57,11 +75,7 @@ function playGame(playerButtonChoice) {
         computerScore++;
     }
     updateScoreboard();
-    if (playerScore == 5) {
-        console.log('Game Over: Player Wins');
-    } else if (computerScore == 5) {
-        console.log('Game Over: Computer Wins');
-    }
+    resetGame();
     console.log(playerSelection, computerSelection)
     console.log(playRound(playerSelection, computerSelection))
     console.log(playerScore, computerScore, ties);
