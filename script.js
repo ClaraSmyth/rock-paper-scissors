@@ -35,24 +35,29 @@ const scoreboard = document.querySelector('#scoreboard')
 //  Plays the game when a button is clicked
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        let playerSelection = button.id;
-        let computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection);
-        if (playRound(playerSelection, computerSelection) == 'Tie') {
-            ties++;
-        } else if (playRound(playerSelection, computerSelection) == 'Player Wins') {
-            playerScore++;
-        } else if (playRound(playerSelection, computerSelection) == 'Computer Wins') {
-            computerScore++;
-        }
-        scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
-        if (playerScore == 5) {
-            console.log('Game Over: Player Wins')
-        } else if (computerScore == 5) {
-            console.log('Game Over: Computer Wins')
-        }
-        console.log(playerSelection, computerSelection)
-        console.log(playRound(playerSelection, computerSelection))
-        console.log(playerScore, computerScore, ties);
+        playGame(button.id);
     });
 });
+
+
+function playGame(playerButtonChoice) {
+    let playerSelection = playerButtonChoice;
+    let computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection);
+    if (playRound(playerSelection, computerSelection) == 'Tie') {
+        ties++;
+    } else if (playRound(playerSelection, computerSelection) == 'Player Wins') {
+        playerScore++;
+    } else if (playRound(playerSelection, computerSelection) == 'Computer Wins') {
+        computerScore++;
+    }
+    scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+    if (playerScore == 5) {
+        console.log('Game Over: Player Wins')
+    } else if (computerScore == 5) {
+        console.log('Game Over: Computer Wins')
+    }
+    console.log(playerSelection, computerSelection)
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playerScore, computerScore, ties);
+}
