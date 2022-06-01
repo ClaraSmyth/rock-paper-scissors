@@ -10,6 +10,22 @@ function computerPlay() {
     return choiceArray[Math.floor(Math.random() * choiceArray.length)];
 }
 
+// Triggers the game 
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        playGame(button.id);
+    });
+});
+
+// Plays the game
+function playGame(playerButtonChoice) {
+    let playerSelection = playerButtonChoice;
+    let computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection);
+    updateScoreboard();
+    gameOver();
+}
+
 // This plays a round of the game and decides who wins
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -25,7 +41,6 @@ function playRound(playerSelection, computerSelection) {
 function updateScoreboard() {
     scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
 }
-
 
 // Resets the game and scoreboard
 function gameOver() {
@@ -44,24 +59,6 @@ function gameOver() {
         updateScoreboard()
         return;
     }
-}
-
-// Button that triggers the game
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        playGame(button.id);
-    });
-});
-
-// Plays the game
-function playGame(playerButtonChoice) {
-    let playerSelection = playerButtonChoice;
-    let computerSelection = computerPlay();
-    playRound(playerSelection, computerSelection);
-    updateScoreboard();
-    gameOver();
-    console.log(playerSelection, computerSelection)
-    console.log(playerScore, computerScore, ties);
 }
 
 updateScoreboard()
