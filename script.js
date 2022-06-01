@@ -32,17 +32,19 @@ const buttons = document.querySelectorAll('button');
 const scoreboard = document.querySelector('#scoreboard')
 
 
-//  Plays the game when a button is clicked
+// Button that triggers the game
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playGame(button.id);
     });
 });
 
+// Updates the scoreboard
 function updateScoreboard() {
-    scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+    scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
 }
 
+// Plays the game
 function playGame(playerButtonChoice) {
     let playerSelection = playerButtonChoice;
     let computerSelection = computerPlay();
@@ -56,9 +58,9 @@ function playGame(playerButtonChoice) {
     }
     updateScoreboard();
     if (playerScore == 5) {
-        console.log('Game Over: Player Wins')
+        console.log('Game Over: Player Wins');
     } else if (computerScore == 5) {
-        console.log('Game Over: Computer Wins')
+        console.log('Game Over: Computer Wins');
     }
     console.log(playerSelection, computerSelection)
     console.log(playRound(playerSelection, computerSelection))
