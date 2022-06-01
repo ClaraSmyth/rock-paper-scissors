@@ -3,7 +3,6 @@ let playerScore = 0;
 let computerScore = 0;
 let ties = 0;
 
-
 // This selects a random choice from the Array
 function computerPlay() {
     return choiceArray[Math.floor(Math.random() * choiceArray.length)];
@@ -28,8 +27,12 @@ function playRound(playerSelection, computerSelection) {
     }
  }
 
-//  Plays the game when a button is clicked
+
 const buttons = document.querySelectorAll('button');
+const scoreboard = document.querySelector('#scoreboard')
+
+
+//  Plays the game when a button is clicked
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let playerSelection = button.id;
@@ -42,6 +45,7 @@ buttons.forEach((button) => {
         } else if (playRound(playerSelection, computerSelection) == 'Computer Wins') {
             computerScore++;
         }
+        scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         if (playerScore == 5) {
             console.log('Game Over: Player Wins')
         } else if (computerScore == 5) {
