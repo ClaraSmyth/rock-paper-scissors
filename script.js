@@ -14,17 +14,9 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return ties++;
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
         return playerScore++;
-    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        return computerScore++;
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return playerScore++;
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return computerScore++;
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return playerScore++;
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+    } else if ((playerSelection == 'rock' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'rock')) {
         return computerScore++;
     }
  }
