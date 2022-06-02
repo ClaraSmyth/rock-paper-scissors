@@ -56,6 +56,14 @@ main {
     font-family: inherit;
 }
 
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(1);
+}
+
 .fa-solid {
     font-size: 3rem;
 }
