@@ -35,7 +35,6 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         ties++;
         roundOutcome.textContent = 'Looks like a tie!';
-        // roundOutcome.animate({ transform: ['scale(1)', 'scale(1.1)', 'scale(1)']}, {duration: 300});
         roundOutcome.animate({ transform: ['scale(1.1)', 'scale(1)']}, {duration: 300, easing: 'ease-in'});
         return;
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
@@ -53,7 +52,6 @@ function playRound(playerSelection, computerSelection) {
 
 // Updates the scoreboard
 function updateScoreboard() {
-    // scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
     playerScoreboard.textContent = playerScore;
     computerScoreboard.textContent = computerScore;
 }
