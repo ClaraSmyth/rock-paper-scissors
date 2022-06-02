@@ -94,6 +94,33 @@ header h1 {
     font-size: 3rem;
 }
 
+.modal-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    background-color: hsla(0, 0%, 0%, .3);
+    opacity: 0;
+}
+
+.modal-body.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal-box {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    background-color: aqua;
+}
+
 /* FOOTER */
 
 footer {

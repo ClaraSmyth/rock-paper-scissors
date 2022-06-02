@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll('button');
 const playerScoreboard = document.querySelector('#player-scoreboard')
 const computerScoreboard = document.querySelector('#computer-scoreboard')
 const roundOutcome = document.querySelector('#round-outcome')
+const modal = document.querySelector('#modal')
 let playerScore = 0;
 let computerScore = 0;
 let ties = 0;
@@ -55,20 +56,28 @@ function updateScoreboard() {
 // Resets the game and scoreboard
 function gameOver() {
     if (playerScore == 5) {
-        roundOutcome.textContent = 'You won the game!! Click a button to play again!';;
+        gameOverPopUp()
+        roundOutcome.textContent = 'Best of 5! Goodluck!';
         playerScore = 0;
         computerScore = 0;
         ties = 0;
-        updateScoreboard()
         return;
     } else if (computerScore == 5) {
-        roundOutcome.textContent = 'You lost the game!! Click a button to play again!';;
+        gameOverPopUp()
+        roundOutcome.textContent = 'Best of 5! Goodluck!';
         playerScore = 0;
         computerScore = 0;
         ties = 0;
-        updateScoreboard()
         return;
     }
 }
 
-// updateScoreboard()
+// Endgame modal popup
+function gameOverPopUp() {
+    modal.classList.add('active')
+    modal.addEventListener('click', () => {
+        updateScoreboard();
+        modal.classList.remove('active');
+        return;
+    });
+}
