@@ -1,8 +1,9 @@
 const buttons = document.querySelectorAll('button');
-const playerScoreboard = document.querySelector('#player-scoreboard')
-const computerScoreboard = document.querySelector('#computer-scoreboard')
-const roundOutcome = document.querySelector('#round-outcome')
-const modal = document.querySelector('#modal')
+const playerScoreboard = document.querySelector('#player-scoreboard');
+const computerScoreboard = document.querySelector('#computer-scoreboard');
+const roundOutcome = document.querySelector('#round-outcome');
+const modal = document.querySelector('#modal');
+const modalText = document.querySelector('#modal-text');
 let playerScore = 0;
 let computerScore = 0;
 let ties = 0;
@@ -56,6 +57,7 @@ function updateScoreboard() {
 // Resets the game and scoreboard
 function gameOver() {
     if (playerScore == 5) {
+        modalText.textContent = 'You Won!'
         gameOverPopUp()
         roundOutcome.textContent = 'Best of 5! Goodluck!';
         playerScore = 0;
@@ -63,6 +65,7 @@ function gameOver() {
         ties = 0;
         return;
     } else if (computerScore == 5) {
+        modalText.textContent = 'You Lost!'
         gameOverPopUp()
         roundOutcome.textContent = 'Best of 5! Goodluck!';
         playerScore = 0;
