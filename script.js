@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('button');
 const playerScoreboard = document.querySelector('#player-scoreboard')
 const computerScoreboard = document.querySelector('#computer-scoreboard')
+const roundOutcome = document.querySelector('#round-outcome')
 let playerScore = 0;
 let computerScore = 0;
 let ties = 0;
@@ -30,11 +31,17 @@ function playGame(playerButtonChoice) {
 // This plays a round of the game and decides who wins
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        return ties++;
+        ties++;
+        roundOutcome.textContent = 'Looks like a tie!';
+        return;
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
-        return playerScore++;
+        playerScore++;
+        roundOutcome.textContent = 'Player Wins!';
+        return;
     } else if ((playerSelection == 'rock' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'rock')) {
-        return computerScore++;
+        computerScore++;
+        roundOutcome.textContent = 'Computer Wins!';
+        return;
     }
  }
 
@@ -48,14 +55,14 @@ function updateScoreboard() {
 // Resets the game and scoreboard
 function gameOver() {
     if (playerScore == 5) {
-        alert('Game Over: Player Wins');
+        roundOutcome.textContent = 'Player Won the Game! Click a button to play again!';;
         playerScore = 0;
         computerScore = 0;
         ties = 0;
         updateScoreboard()
         return;
     } else if (computerScore == 5) {
-        alert('Game Over: Computer Wins');
+        roundOutcome.textContent = 'Computer Won the Game! Click a button to play again!';;
         playerScore = 0;
         computerScore = 0;
         ties = 0;
