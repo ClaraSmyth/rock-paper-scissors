@@ -36,11 +36,11 @@ function playRound(playerSelection, computerSelection) {
         return;
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
         playerScore++;
-        roundOutcome.textContent = 'Player Wins!';
+        roundOutcome.textContent = 'You won, Nice!';
         return;
     } else if ((playerSelection == 'rock' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'rock')) {
         computerScore++;
-        roundOutcome.textContent = 'Computer Wins!';
+        roundOutcome.textContent = 'You lost, Unlucky!';
         return;
     }
  }
@@ -55,14 +55,14 @@ function updateScoreboard() {
 // Resets the game and scoreboard
 function gameOver() {
     if (playerScore == 5) {
-        roundOutcome.textContent = 'Player Won the Game! Click a button to play again!';;
+        roundOutcome.textContent = 'You won the game!! Click a button to play again!';;
         playerScore = 0;
         computerScore = 0;
         ties = 0;
         updateScoreboard()
         return;
     } else if (computerScore == 5) {
-        roundOutcome.textContent = 'Computer Won the Game! Click a button to play again!';;
+        roundOutcome.textContent = 'You lost the game!! Click a button to play again!';;
         playerScore = 0;
         computerScore = 0;
         ties = 0;
