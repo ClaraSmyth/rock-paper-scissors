@@ -1,5 +1,6 @@
 const buttons = document.querySelectorAll('button');
-const scoreboard = document.querySelector('#scoreboard')
+const playerScoreboard = document.querySelector('#player-scoreboard')
+const computerScoreboard = document.querySelector('#computer-scoreboard')
 let playerScore = 0;
 let computerScore = 0;
 let ties = 0;
@@ -39,7 +40,9 @@ function playRound(playerSelection, computerSelection) {
 
 // Updates the scoreboard
 function updateScoreboard() {
-    scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
+    // scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
+    playerScoreboard.textContent = `Player: ${playerScore}`;
+    computerScoreboard.textContent = `Computer: ${computerScore}`;
 }
 
 // Resets the game and scoreboard
@@ -61,4 +64,4 @@ function gameOver() {
     }
 }
 
-updateScoreboard()
+// updateScoreboard()
