@@ -9,3 +9,5 @@ Update 2 - Game now has working buttons and a live scoreboard. Currently has no 
 Update 3 - Game fully working with a UI now, still not styled at all. Merged rps-ui branch with the main branch. Will now work mostly on styling the webpage so it doesn't look so bad.
 
 Update 4 - Fully styled and responsive. Unsure if I should add color or leave it black and white, cant decide. Will merge with the main branch for now.
+
+Update 5 - Added a nice pop up to show the final game outcome.
