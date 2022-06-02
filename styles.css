@@ -10,6 +10,15 @@ body {
     margin: 0;
     font-family: 'Fredoka One', cursive;
     font-size: 24px;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 55%;
 }
 
 /* HEADER */
@@ -18,10 +27,27 @@ header {
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 3rem;
+}
+
 /* MAIN CONTENT */
 
-main {
+.game-info {
     text-align: center;
+    padding: 10px;
+    font-size: 2.1rem;
+}
+
+#round-outcome {
+    margin: 0;
+}
+
+.main-content {
+    text-align: center;
+    padding: 10px;
 }
 
 .score-container {
@@ -32,7 +58,7 @@ main {
 .scores {
     padding: 20px;
     margin: 0;
-    width: 200px;
+    max-width: 200px;
 }
 
 #player-scoreboard,
@@ -78,6 +104,12 @@ footer {
     width: 100%;
     position: absolute;
     bottom: 0;
+    text-align: center;
+}
+
+footer p {
+    padding: 10px;
+    margin: 0;
 }
 
 .link {

@@ -10,13 +10,14 @@
     <script src="https://kit.fontawesome.com/ab8c93fe1b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
+    <div class="container">
         <header>
             <h1>Rock Paper Scissors</h1>
         </header>
-
-        <main>
+        <section class="game-info">
             <p id="round-outcome">Best of 5!</p>
+        </section>
+        <section class="main-content">
             <div class="score-container">
                 <p class="scores">Player: <span id="player-scoreboard">0</span></p>
                 <p class="scores">Computer: <span id="computer-scoreboard">0</span></p>
@@ -26,7 +27,7 @@
                 <button class="btn" id="paper"><i class="fa-solid fa-hand"></i></button>
                 <button class="btn" id="scissors"><i class="fa-solid fa-hand-peace"></i></button>
             </div>
-        </main>
+        </section>
 
         <footer>
             <p>Created by <a class="link" href="https://github.com/ClaraSmyth">Clara</a> for <a class="link" href="https://www.theodinproject.com">TheOdinProject</a></p>
