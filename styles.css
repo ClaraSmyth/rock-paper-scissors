@@ -61,3 +61,13 @@ footer {
     position: absolute;
     bottom: 0;
 }
+
+.link {
+    text-decoration: underline;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
