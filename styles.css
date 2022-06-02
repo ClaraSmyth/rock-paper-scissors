@@ -26,8 +26,15 @@ main {
 }
 
 .scores {
-    padding: 10px;
+    padding: 20px;
     margin: 0;
+    width: 200px;
+}
+
+#player-scoreboard,
+#computer-scoreboard {
+    display: inline-block;
+    width: 20px;
 }
 
 .btn-container {
@@ -37,7 +44,8 @@ main {
 
 .btn {
     background-color: white;
-    border: 1px solid black;
+    border: 5px solid black;
+    border-radius: 20px;
     height: 100px;
     width: 100px;
     margin: 10px;

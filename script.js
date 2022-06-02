@@ -41,8 +41,8 @@ function playRound(playerSelection, computerSelection) {
 // Updates the scoreboard
 function updateScoreboard() {
     // scoreboard.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore} Ties: ${ties}`;
-    playerScoreboard.textContent = `Player: ${playerScore}`;
-    computerScoreboard.textContent = `Computer: ${computerScore}`;
+    playerScoreboard.textContent = playerScore;
+    computerScoreboard.textContent = computerScore;
 }
 
 // Resets the game and scoreboard
