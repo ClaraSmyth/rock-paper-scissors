@@ -35,14 +35,18 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         ties++;
         roundOutcome.textContent = 'Looks like a tie!';
+        // roundOutcome.animate({ transform: ['scale(1)', 'scale(1.1)', 'scale(1)']}, {duration: 300});
+        roundOutcome.animate({ transform: ['scale(1.1)', 'scale(1)']}, {duration: 300, easing: 'ease-in'});
         return;
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
         playerScore++;
         roundOutcome.textContent = 'You won, Nice!';
+        roundOutcome.animate({ transform: ['scale(1.1)', 'scale(1)']}, {duration: 300, easing: 'ease-in'});
         return;
     } else if ((playerSelection == 'rock' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'rock')) {
         computerScore++;
         roundOutcome.textContent = 'You lost, Unlucky!';
+        roundOutcome.animate({ transform: ['scale(1.1)', 'scale(1)']}, {duration: 300, easing: 'ease-in'});
         return;
     }
  }
