@@ -1,5 +1,7 @@
 # Rock Paper Scissor
 
+Live Version - [Click here!](https://clarasmyth.github.io/rock-paper-scissors/)
+
 This is my first project using JavaScript, it was created for [TheOdinProject](https://www.theodinproject.com/).
 
 
