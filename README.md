@@ -2,6 +2,8 @@
 
 Live Version - [Click here!](https://clarasmyth.github.io/rock-paper-scissors/)
 
+![Image of the Game](https://i.imgur.com/qE7Q0bs.png)
+
 This is my first project using JavaScript, it was created for [TheOdinProject](https://www.theodinproject.com/).
 
 
