@@ -1,35 +1,50 @@
-# Rock Paper Scissor
+<div  align=center>
+	<h1>Rock Paper Scissors
+	<br>
+		<img src="https://img.shields.io/static/v1?label=&message=HTML&color=E34F26&style=for-the-badge&logo=HTML5&logoColor=white&logoWidth=&labelColor=&link=">
+		<img src="https://img.shields.io/static/v1?label=&message=CSS&color=1572B6&style=for-the-badge&logo=CSS3&logoColor=white&logoWidth=&labelColor=&link=">
+		<img src="https://img.shields.io/static/v1?label=&message=Javascript&color=F7DF1E&style=for-the-badge&logo=Javascript&logoColor=black&logoWidth=&labelColor=&link=">
+		<br>
+	</h1>
+	<h3><b><a href="https://clarasmyth.github.io/rock-paper-scissors/">View Live Demo</a></b></h3>
+</div>
 
-Live Version - [Click here!](https://clarasmyth.github.io/rock-paper-scissors/)
+![Gif of Project](./readme-assets/RPS.gif)
 
-![Image of the Game](https://i.imgur.com/qE7Q0bs.png)
+## Description
 
-This is my first project using JavaScript, it was created for [TheOdinProject](https://www.theodinproject.com/).
+This is a rock paper scissors app created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
+To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+
+## Built Using
+
+-   HTML5 <img src="./readme-assets/html5.svg">
+-   CSS3 <img src="./readme-assets/css3.svg">
+-   JavaScript <img src="./readme-assets/javascript.svg">
+
+## Credits
+
+#### Icons
+
+-   [Simple Icons](https://simpleicons.org/)
+-   [Font Awesome](https://fontawesome.com/)
 
 ## Lessons Learned
 
 I learned how to apply the fundamentals of JavaScript, which I learned through TheOdinProject.
 I found JavaScript to be very difficult at first but by working on this project it really helped me wrap my head around the basics of the language.
 
-Some of what I learned:
-- Basics ( Variables, Functions , Operators etc )
-- Data Types and Conditionals
-- Arrays and Loops
-- DOM Manipulation and Events
-- How to use the console and debugger to solve problems
+#### Some of what I learned:
 
+-   Basics ( Variables, Functions , Operators etc )
+-   Data Types and Conditionals
+-   Arrays and Loops
+-   DOM Manipulation and Events
+-   How to use the console and debugger to solve problems
 
-## Notes
+## Gallery
 
-These are the notes I created as I worked through the project.
+#### Home page
 
-- Update 1 - Game is fully working in console, created new git branch to work on adding a UI to the game. Will also clean up some of the original code.
-
-- Update 2 - Game now has working buttons and a live scoreboard. Currently has no end game feature and no styling just default html elements and text but it works. Still need to finish off the javascript before I start working on styling the page with CSS.
-
-- Update 3 - Game fully working with a UI now, still not styled at all. Merged rps-ui branch with the main branch. Will now work mostly on styling the webpage so it doesn't look so bad.
-
-- Update 4 - Fully styled and responsive. Unsure if I should add color or leave it black and white, cant decide. Will merge with the main branch for now.
-
-- Update 5 - Added a nice pop up to show the final game outcome.
+![Image of Project](./readme-assets/rps.png)
