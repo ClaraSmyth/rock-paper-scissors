@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js" defer></script>
-    <script src="https://kit.fontawesome.com/ab8c93fe1b.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Rock Paper Scissors</h1>
-        </header>
-        <section class="game-info">
-            <p id="round-outcome">Best of 5! Goodluck!</p>
-        </section>
-        <section class="main-content">
-            <div class="score-container">
-                <p class="scores">Player: <span id="player-scoreboard">0</span></p>
-                <p class="scores">Computer: <span id="computer-scoreboard">0</span></p>
-            </div>
-            <div class="btn-container">
-                <button class="btn" id="rock"><i class="fa-solid fa-hand-fist"></i></button>
-                <button class="btn" id="paper"><i class="fa-solid fa-hand"></i></button>
-                <button class="btn" id="scissors"><i class="fa-solid fa-hand-peace"></i></button>
-            </div>
-            <div class="modal-body" id="modal">
-                <div class="modal-box">
-                    <h2>Game Over!</h2>
-                    <p id="modal-text"></p>
-                    <p>Click anywhere to play again!</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./script.js" defer></script>
+        <script src="https://kit.fontawesome.com/ab8c93fe1b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Rock Paper Scissors</h1>
+            </header>
+            <section class="game-info">
+                <p id="round-outcome">Best of 5! Goodluck!</p>
+            </section>
+            <section class="main-content">
+                <div class="score-container">
+                    <p class="scores">Player: <span id="player-scoreboard">0</span></p>
+                    <p class="scores">Computer: <span id="computer-scoreboard">0</span></p>
                 </div>
-            </div>
-        </section>
+                <div class="btn-container">
+                    <button class="btn" id="rock"><i class="fa-solid fa-hand-fist"></i></button>
+                    <button class="btn" id="paper"><i class="fa-solid fa-hand"></i></button>
+                    <button class="btn" id="scissors"><i class="fa-solid fa-hand-peace"></i></button>
+                </div>
+                <div class="modal-body" id="modal">
+                    <div class="modal-box">
+                        <h2>Game Over!</h2>
+                        <p id="modal-text"></p>
+                        <p>Click anywhere to play again!</p>
+                    </div>
+                </div>
+            </section>
 
-        <footer>
-            <p>Created by <a class="link" href="https://github.com/ClaraSmyth">Clara</a> for <a class="link" href="https://www.theodinproject.com">TheOdinProject</a></p>
-        </footer>
-    </div>
-</body>
+            <footer>
+                <p>
+                    Created by <a target="_blank" class="link" href="https://github.com/ClaraSmyth">Clara</a> for
+                    <a target="_blank" class="link" href="https://www.theodinproject.com">TheOdinProject</a>
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>
